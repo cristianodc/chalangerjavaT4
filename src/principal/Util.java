@@ -61,7 +61,7 @@ public class Util {
 			
 			System.out.println(moeda);
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		return null;
