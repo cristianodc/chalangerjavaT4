@@ -41,7 +41,7 @@ public class Util {
 	{
 		String URL = "https://economia.awesomeapi.com.br/json/last/";
 		 String urlParaChamada = URL+codigo;
-		 
+		 Moeda moeda = new Moeda();
 		try {
 			
 			URL url = new URL(urlParaChamada);
@@ -57,14 +57,14 @@ public class Util {
 					jsonMoeda.append(retornUrl);
 				}
 		//	System.out.println(jsonMoeda.toString());
-			Moeda moeda = new Gson().fromJson(jsonMoeda.toString(), Moeda.class);
+			 moeda = new Gson().fromJson(jsonMoeda.toString(), Moeda.class);
 			
 			System.out.println(moeda);
 		} catch (IOException e) {
 			
 			e.printStackTrace();
 		}
-		return null;
+		return moeda;
 		
 	}
 }
